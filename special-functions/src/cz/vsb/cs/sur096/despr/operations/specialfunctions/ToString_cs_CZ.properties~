@@ -1,8 +1,0 @@
-name =P\u0159eved na\n\u0159et\u011Bzec 
-description = Metoda zavol\u00E1 na objekt toString() a po\u0161le to na v\u00FDstup.
-
-input = Vstupn\u00ED objekt
-output =V\u00FDstupn\u00ED \u0159et\u011Bzec 
-
-exception.output_parameter_set_method = Metoda by nem\u011Bla b\u00FDt nikdy pou\u017Eita!
-exception.null_input = Vstupn\u00ED objekt nesm\u00ED b\u00FDt pr\u00E1zdn\u00FD!
