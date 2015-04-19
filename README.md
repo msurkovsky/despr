@@ -9,6 +9,8 @@ Originally the tool were used for image processig, thus it provides a collecitio
 ## Tool structure
 Despr is consited from several modules. The basic modul is an **editor**. By default there is no operation. It is let up to a user which operartion they will use.
 
+![alt tag](https://raw.github.com/msurkovsky/despr/master/web-doc/img/despr_overview.png)
+
 ### Editor structure
 * manifest.mf
 * build-despr.xml -- and script for building the editor.
