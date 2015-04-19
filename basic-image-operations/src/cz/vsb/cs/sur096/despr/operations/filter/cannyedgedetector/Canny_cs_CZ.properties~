@@ -1,0 +1,33 @@
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+
+name = <html>Detekce hran<br>Canny</html>
+description = Metoda detekuje hrany v obraze pomoc\u00ED Cannyho hranov\u00E9ho detektoru.
+
+inputImage =Vstupn\u00ED obr\u00E1zek 
+outputImage =V\u00FDstupn\u00ED obr\u00E1zek 
+size = Velikost masky
+theta =\u00DAhel 
+lowthresh =Spodn\u00ED pr\u00E1h 
+highthresh =Horn\u00ED pr\u00E1h 
+scale = Scale
+offset = Offset
+completeSides = Doplnit strany?
+extendedBackgroundColor =Barva pozad\u00ED 
+
+exception.output_parameter_set_method = Metoda by nem\u011Bla b\u00FDt nikdy pou\u017Eita!
+exception.null_size = Hodnota velikosti masky nesm\u00ED b\u00FDt pr\u00E1zdn\u00E1!
+exception.even_size = Velikost masky mus\u00ED b\u00FDt lich\u00E9 \u010D\u00EDslo!
+exception.null_theta = \u00DAhel nesm\u00ED b\u00FDt pr\u00E1zdn\u00FD!
+exception.theta_is_out_of_range = \u00DAhel je mimo rozsah <0, Pi>!
+exception.null_lowthresh = Spodn\u00ED pr\u00E1h nesm\u00ED b\u00FDt pr\u00E1zdn\u00FD!
+exception.lowthresh_out_of_range = Spodn\u00ED pr\u00E1h je mimo rozsah <0, 255>!
+exception.null_highthresh = Horn\u00ED prah nesm\u00ED b\u00FDt pr\u00E1zdn\u00FD!
+exception.highthresh_out_of_range = Horn\u00ED pr\u00E1h je mimo rozsah <0, 255>!
+exception.null_scale = Scale nesm\u00ED b\u00FDt pr\u00E1zdn\u00FD!
+exception.negative_scale = Scale mus\u00ED b\u00FDt pozitivn\u00ED cel\u00E9 \u010D\u00EDslo!
+exception.null_offset = Offset nesm\u00ED b\u00FDt pr\u00E1zdn\u00FD!
+exception.offset_is_out_of_range = Offset je mimo rozsah <0, 255>!
+exception.null_complete_sides = P\u0159\u00EDznak dopln\u011Bn\u00ED stran nesm\u00ED b\u00FDt pr\u00E1zdn\u00FD!
+exception.null_extended_background_color = Barva pozad\u00ED nesm\u00ED b\u00FDt pr\u00E1zdn\u00E1!
+exception.null_input_image = Vstupn\u00ED obr\u00E1zek nesm\u00ED b\u00FDt pr\u00E1zdn\u00FD!
