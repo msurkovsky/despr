@@ -1,0 +1,69 @@
+<project name="despr-api" basedir="." default="make-distro">
+	<property file="despr-build.properties"/>
+	<property file="despr-api.properties"/>
+
+	<tstamp prefix="time">
+		<format property="TODAY" pattern="dd. MMMM yyyy - HH:mm"/>
+	</tstamp>
+
+	<target name="doc">
+		<mkdir dir="${doc.dir}"/>
+		<javadoc
+				use="true" author="true" version="true"
+				access="package"
+				sourcepath="${src.dir}"
+				packagenames="*.*"
+				destdir="${build.dir}/doc"
+				windowtitle="${app.name} ${app.version}"
+				noqualifier="java.*:javax.*:com.sun.*"
+				linksource="true">
+			<link href='http://java.sun.com/javase/6/docs/api/'/>      
+      		<header><![CDATA[<h1>${app.name} ${app.version}</h1>]]></header>
+    	</javadoc>
+	</target>
+
+	<target name="compile">
+		<mkdir dir="${classes.dir}"/>
+		<javac srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="false"/>
+		<copy todir="${classes.dir}">
+			<fileset dir="${src.dir}" excludes="**/*.java"/>
+		</copy>
+	</target>
+
+	<target name="jar" depends="compile">
+		<!-- create the jar -->
+		<jar jarfile="${jar.dir}/${app.name}.jar" basedir="${classes.dir}">
+			<!-- define MANIFEST.MF -->
+			<manifest>
+				<attribute name="Build-By" value="${author}"/>
+				<section name="Basic information">
+				  <attribute name="Specification-Title"    value="${app.name}"/>
+			      <attribute name="Specification-Version"  value="${app.version}"/>
+			      <attribute name="Specification-Vendor"  value="${organization}"/>
+				  <attribute name="Implementation-Version" value="${app.version} (${time.TODAY})"/> 
+				  <attribute name="Implementation-Vendor"  value="${author}"/>
+			    </section>
+			</manifest>
+		</jar>
+	</target>
+
+	<target name='distro' depends='jar, doc'>
+		<zip destfile='${app.name}_${app.version}.zip' duplicate='preserve'>
+			<zipfileset file="${jar.dir}/${app.name}.jar"/>
+			<zipfileset dir="${build.dir}/doc" prefix="doc"/>
+			<zipfileset dir="${src.dir}" prefix="src"/>
+	    </zip>
+	</target>
+
+	<target name="clean-build">
+		<delete dir="${build.dir}"/>
+	</target>
+
+	<target name="clean-all">
+		<delete dir="${build.dir}"/>
+		<delete file="${app.name}_${app.version}.zip"/>
+	</target>
+
+	<target name="make-distro" depends="clean-all, distro, clean-build"/>
+
+</project>
