@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="Save.svg"
+   inkscape:export-filename="/home/sur096/NetBeansProjects/Despr/src/cz/vsb/cs/sur096/despr/operations/SaveImage.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="8"
+     inkscape:cx="225.05612"
+     inkscape:cy="756.18516"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1280"
+     inkscape:window-height="746"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       orientation="1,0"
+       position="197.73736,826.55732"
+       id="guide3773" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#f2f2f2;stroke:#000000;stroke-width:0.97399861000000021;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1"
+       id="rect2985"
+       width="31.026001"
+       height="31.026001"
+       x="216.69952"
+       y="223.43196"
+       ry="0.27062538"
+       inkscape:export-filename="/home/sur096/NetBeansProjects/Despr/src/cz/vsb/cs/sur096/despr/operations/save_32.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#93ac93;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1"
+       d="m 226.96252,232.83878 c -0.99031,0 -1.8318,0.82314 -1.875,1.8125 l -0.53125,12.3125 c -0.0432,0.98936 0.72844,1.8125 1.71875,1.8125 l 2.1875,0 7.5,0 2.1875,0 c 0.99031,0 1.76195,-0.82314 1.71875,-1.8125 l -0.53125,-12.3125 c -0.0432,-0.98936 -0.88469,-1.8125 -1.875,-1.8125 l -0.8125,0 -8.875,0 -0.8125,0 z"
+       id="rect3755"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/sur096/NetBeansProjects/Despr/src/cz/vsb/cs/sur096/despr/operations/save_32.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       id="g3767"
+       style="fill:#6f916f;fill-opacity:0.94117647"
+       transform="translate(11.811354,-4.0644603)"
+       inkscape:export-filename="/home/sur096/NetBeansProjects/Despr/src/cz/vsb/cs/sur096/despr/operations/save_32.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         transform="matrix(0.86904597,0,0,0.75111755,45.651862,59.99946)"
+         d="m 205.43978,249.22777 c 0,2.40591 -1.95038,4.35628 -4.35628,4.35628 -2.40591,0 -4.35629,-1.95037 -4.35629,-4.35628 0,-2.40591 1.95038,-4.35628 4.35629,-4.35628 2.4059,0 4.35628,1.95037 4.35628,4.35628 z"
+         sodipodi:ry="4.3562827"
+         sodipodi:rx="4.3562827"
+         sodipodi:cy="249.22777"
+         sodipodi:cx="201.0835"
+         id="path3763"
+         style="fill:#6f916f;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:0.94117647"
+         sodipodi:type="arc" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#6f916f;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:0.94117647"
+         id="path3765"
+         sodipodi:cx="201.0835"
+         sodipodi:cy="249.22777"
+         sodipodi:rx="4.3562827"
+         sodipodi:ry="4.3562827"
+         d="m 205.43978,249.22777 c 0,2.40591 -1.95038,4.35628 -4.35628,4.35628 -2.40591,0 -4.35629,-1.95037 -4.35629,-4.35628 0,-2.40591 1.95038,-4.35628 4.35629,-4.35628 2.4059,0 4.35628,1.95037 4.35628,4.35628 z"
+         transform="matrix(0.61531259,0,0,0.53181546,96.673457,114.65563)" />
+    </g>
+    <path
+       style="fill:#00ff00;stroke:#000000;stroke-width:0.79049242;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 228.93755,229.01781 c 0,2.25315 -0.0162,3.24646 -0.0162,4.50316 l 0.0524,4.5134 -2.12176,-0.0174 5.36052,4.79237 5.36054,-4.79237 -2.12009,-0.009 -0.005,-4.48719 c 0,-1.35335 0.0122,-3.2319 0.005,-4.51189 z"
+       id="path3775"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccc"
+       inkscape:export-filename="/home/sur096/NetBeansProjects/Despr/src/cz/vsb/cs/sur096/despr/operations/save_32.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/sur096/NetBeansProjects/Despr/resources/icons/32x32/save.png"
+       ry="0.27062538"
+       y="279.14801"
+       x="217.94215"
+       height="31.026001"
+       width="31.026001"
+       id="rect2989"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.97399860999999999;stroke-miterlimit:4;stroke-dasharray:none" />
+    <g
+       id="g3090"
+       transform="matrix(1.5486891,0,0,1.5486891,-128.09429,-161.6773)"
+       inkscape:export-filename="/home/sur096/NetBeansProjects/Despr/resources/icons/32x32/save.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/sur096/NetBeansProjects/Despr/resources/icons/32x32/save.png"
+         style="fill:#93ac93;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 228.20515,288.55484 c -0.99031,0 -1.8318,0.82314 -1.875,1.8125 l -0.53125,12.3125 c -0.0432,0.98936 0.72844,1.8125 1.71875,1.8125 l 2.1875,0 7.5,0 2.1875,0 c 0.99031,0 1.76195,-0.82314 1.71875,-1.8125 l -0.53125,-12.3125 c -0.0432,-0.98936 -0.88469,-1.8125 -1.875,-1.8125 l -0.8125,0 -8.875,0 -0.8125,0 z"
+         id="path2991"
+         inkscape:connector-curvature="0" />
+      <g
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/sur096/NetBeansProjects/Despr/resources/icons/32x32/save.png"
+         id="g2993"
+         style="fill:#6f916f;fill-opacity:0.94117647"
+         transform="translate(13.053986,51.651593)">
+        <path
+           transform="matrix(0.86904597,0,0,0.75111755,45.651862,59.99946)"
+           d="m 205.43978,249.22777 c 0,2.40591 -1.95038,4.35628 -4.35628,4.35628 -2.40591,0 -4.35629,-1.95037 -4.35629,-4.35628 0,-2.40591 1.95038,-4.35628 4.35629,-4.35628 2.4059,0 4.35628,1.95037 4.35628,4.35628 z"
+           sodipodi:ry="4.3562827"
+           sodipodi:rx="4.3562827"
+           sodipodi:cy="249.22777"
+           sodipodi:cx="201.0835"
+           id="path2995"
+           style="fill:#6f916f;fill-opacity:0.94117647;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           sodipodi:type="arc" />
+        <path
+           sodipodi:type="arc"
+           style="fill:#6f916f;fill-opacity:0.94117647;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           id="path2997"
+           sodipodi:cx="201.0835"
+           sodipodi:cy="249.22777"
+           sodipodi:rx="4.3562827"
+           sodipodi:ry="4.3562827"
+           d="m 205.43978,249.22777 c 0,2.40591 -1.95038,4.35628 -4.35628,4.35628 -2.40591,0 -4.35629,-1.95037 -4.35629,-4.35628 0,-2.40591 1.95038,-4.35628 4.35629,-4.35628 2.4059,0 4.35628,1.95037 4.35628,4.35628 z"
+           transform="matrix(0.61531259,0,0,0.53181546,96.673457,114.65563)" />
+      </g>
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/sur096/NetBeansProjects/Despr/resources/icons/32x32/save.png"
+         style="fill:#00ff00;stroke:#000000;stroke-width:0.79049242;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 230.18018,284.73387 c 0,2.25315 -0.0162,3.24646 -0.0162,4.50316 l 0.0524,4.5134 -2.12176,-0.0174 5.36052,4.79237 5.36054,-4.79237 -2.12009,-0.009 -0.005,-4.48719 c 0,-1.35335 0.0122,-3.2319 0.005,-4.51189 z"
+         id="path2999"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccccccc" />
+    </g>
+  </g>
+</svg>

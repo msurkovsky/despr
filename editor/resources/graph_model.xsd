@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- primitive types (base types) -->
+    <xs:simpleType name="byteType">
+        <xs:restriction base="xs:byte"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="shortType">
+        <xs:restriction base="xs:short"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="intType">
+        <xs:restriction base="xs:int"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="longType">
+        <xs:restriction base="xs:long"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="floatType">
+        <xs:restriction base="xs:float"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="doubleType">
+        <xs:restriction base="xs:double"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="boolType">
+        <xs:restriction base="xs:boolean"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="charType">
+        <xs:restriction base="xs:string">
+            <xs:length value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="stringType">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+
+    <!-- attributes types-->
+    <xs:simpleType name="idType">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="nameType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z1-9_]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="typeType">
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="indexType">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="sizeType">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- complex types -->
+    <xs:complexType name="primitiveType">
+        <xs:choice>
+            <xs:element name="byte"   type="byteType"/>
+            <xs:element name="short"  type="shortType"/>
+            <xs:element name="int"    type ="intType"/>
+            <xs:element name="long"   type="longType"/>
+            <xs:element name="float"  type="floatType"/>
+            <xs:element name="double" type="doubleType"/>
+            <xs:element name="bool"   type="boolType"/>
+            <xs:element name="char"   type="charType"/>
+            <xs:element name="string" type="stringType"/>
+        </xs:choice>
+        <xs:attribute name="name" type="nameType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="objectType">
+        <xs:choice minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="primitive"  type="primitiveType"/>
+            <xs:element name="object"     type="objectType"/>
+            <xs:element name="null_object" type="nullType"/>
+            <xs:element name="collection" type="collectionType"/>
+            <xs:element name="dictionary" type="dictionaryType"/>
+            <xs:element name="array"      type="arrayType"/>
+            <xs:element name="enum"       type="enumType"/>
+        </xs:choice>
+        <xs:attribute name="name" type="nameType" use="required"/>
+        <xs:attribute name="type" type="typeType" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="nullType">
+        <xs:attribute name="name" type="nameType" use="required"/>
+        <xs:attribute name="type" type="typeType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="itemType">
+        <xs:choice>
+            <xs:element name="primitive" type="primitiveType"/>
+            <xs:element name="object" type="objectType"/>
+            <xs:element name="null_object" type="nullType"/>
+            <xs:element name="collection" type="collectionType"/>
+            <xs:element name="dictionary" type="dictionaryType"/>
+            <xs:element name="array" type="arrayType"/>
+            <xs:element name="enum" type="enumType"/>
+        </xs:choice>
+        <xs:attribute name="index" type="indexType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="collectionType">
+        <xs:sequence>
+            <xs:element name="item" type="itemType" 
+                        minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="nameType" use="required"/>
+        <xs:attribute name="type" type="typeType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="keyType">
+        <xs:choice>
+            <xs:element name="primitive" type="primitiveType"/>
+            <xs:element name="object" type="objectType"/>
+            <xs:element name="enum" type="enumType"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="valueType">
+        <xs:choice>
+            <xs:element name="primitive" type="primitiveType"/>
+            <xs:element name="object" type="objectType"/>
+            <xs:element name="null_object" type="nullType"/>
+            <xs:element name="collection" type="collectionType"/>
+            <xs:element name="dictionary" type="dictionaryType"/>
+            <xs:element name="array" type="arrayType"/>
+            <xs:element name="enum" type="enumType"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="dictionaryType">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="key" type="keyType"/>
+            <xs:element name="value" type="valueType"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="nameType" use="required"/>
+        <xs:attribute name="type" type="typeType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="arrayType">
+        <xs:sequence>
+            <xs:element name="item" type="itemType" 
+                        minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="nameType" use="required"/>
+        <xs:attribute name="type" type="typeType" use="required"/>
+        <xs:attribute name="size" type="sizeType" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="enumValue">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="enumType">
+        <xs:simpleContent>
+            <xs:extension base="enumValue">
+                <xs:attribute name="name" type="nameType" use="required"/>
+                <xs:attribute name="type" type="typeType" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="operationType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="primitive"   type="primitiveType"/>
+            <xs:element name="object"      type="objectType"/>
+            <xs:element name="null_object" type="nullType"/>
+            <xs:element name="collection"  type="collectionType"/>
+            <xs:element name="dictionary"  type="dictionaryType"/>
+            <xs:element name="array"       type="arrayType"/>
+            <xs:element name="enum"        type="enumType"/>
+        </xs:choice>
+        <xs:attribute name="id" type="idType" use="required"/>
+        <xs:attribute name="type" type="typeType" use="required"/>
+        <xs:attribute name="root" type="xs:boolean" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="operationsType">
+        <xs:sequence>
+            <xs:element name="operation" type="operationType" 
+                        minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- edges definition -->
+    <xs:complexType name="sourceAndTargetType">
+        <xs:simpleContent>
+            <xs:extension base="nameType">
+                <xs:attribute name="operation_id" type="idType" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="edgeType">
+        <xs:sequence>
+            <xs:element name="source" type="sourceAndTargetType"/>
+            <xs:element name="target" type="sourceAndTargetType"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="idType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="edgesType">
+        <xs:sequence>
+            <xs:element name="edge" type="edgeType" 
+                        minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="graph">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="operations" type="operationsType"/>
+                <xs:element name="edges" type="edgesType"/>
+            </xs:sequence>
+        </xs:complexType>    
+    </xs:element>
+</xs:schema>
