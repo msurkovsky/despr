@@ -1,0 +1,132 @@
+package cz.vsb.cs.sur096.despr.operations.standardization;
+
+import java.util.ArrayList;
+
+
+/**
+ *
+ * @author sur096
+ */
+public class Table
+{
+   /**
+    * Seznam odkazu na nové id-čka. Pozice - 1 určuje id a hodnota odkaz
+    * na nove id.
+    */
+   private ArrayList<Integer> listId;
+
+   /**
+    * Seznam cetnosti (velikostí) jednotlivych oblasti, zase pozice - 1
+    * určuje id oblasti a hondonta na pozici je počet pixelu dané barvy
+    * v oblasti.
+    */
+   private ArrayList<Integer> listFrequency;
+
+   /**
+    * Konstruktor inicializující tabulky
+    */
+   public Table()
+   {
+      listId = new ArrayList<Integer>();
+      listFrequency = new ArrayList<Integer>();
+   }
+
+   /**
+    * Přida nové id do seznamu.
+    * @param id nove id, které chci přidat do seznamu
+    */
+   public void addId( int id )
+   {
+      listId.add( id );
+      // při zavedení nové oblasti nastavim i čitač četnosti pixelů
+      // pro danou oblast
+      listFrequency.add( 1 );
+   }
+
+   /**
+    * Nastaví nové id.
+    * @param id staré id
+    * @param newId nové id
+    */
+   public void setNewId( int id, int newId )
+   {
+      int previousId = listId.get( id - 1 );
+      
+      // kdyby se nahodou nove id uz odkazovalo na jine
+      int nextId = listId.get( newId - 1 );
+
+      // vsem co se odkazovali na stare id nastavim taky nove
+      int listIdSize = listId.size();
+      for ( int i = 0; i < listIdSize; i++ )
+      {
+         if ( listId.get( i ) == previousId )
+         {
+            listId.set( i, nextId );
+         }
+      }
+   }
+
+   /**
+    * Nastaví pozadovane id na nulu, slouzi pri odmazavani malych oblasti.
+    * @param id id oblast
+    */
+   public void setZeroId( int id )
+   {
+      int previosId = listId.get( id - 1 );
+
+      int listIdSize = listId.size();
+      for ( int i = 0; i < listIdSize; i++ )
+      {
+         if ( listId.get( i ) == previosId )
+         {
+            listId.set( i, 0 );
+         }
+      }
+   }
+
+   /**
+    * Získa odkaz na nove id.
+    * @param id id oblasti
+    * @return nové id, na které se oblast odkazuje
+    */
+   public int getNewId( int id )
+   {
+      return listId.get( id - 1 );
+   }
+   
+   /**
+    * Přizvýšení počtu pixelů v oblasti o jeden.
+    * @param id id oblasti.
+    */
+   public void incrementFreq( int id )
+   {
+      int currentFreq = listFrequency.get( id - 1 );
+      listFrequency.set( id - 1, currentFreq + 1 );
+   }
+
+   /**
+    * Vrací četnost daných pixelu v oblasti.
+    * @param id id oblasti.
+    * @return četnost daných pixelů v oblasti.
+    */
+   public int getFrequency( int id )
+   {
+      return listFrequency.get( id - 1 );
+   }
+
+   public void setFrequncy( int id, int frequency )
+   {
+      listFrequency.set( id - 1, frequency );
+   }
+   
+   public ArrayList<Integer> getListId()
+   {
+      return listId;
+   }
+
+   public ArrayList<Integer> getListFreq()
+   {
+      return listFrequency;
+   }
+
+}
