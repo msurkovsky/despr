@@ -23,3 +23,7 @@ Despr is consited from several modules. The basic modul is an **editor**. By def
 
 ### Build editor
 `ant -f build-despr.xml`
+
+### TODO: 
+* build plug-ins
+* install plug-ins
